@@ -1,5 +1,6 @@
-{% extends "portfolio/base.html" %}
 
+{% extends "portfolio/base.html" %}
+{% load static %}
 {% block content %}
 
 <!-- ═══════════════════════════════════════════
@@ -119,8 +120,9 @@
         <div class="w-64 h-64 rounded-2xl glass border border-[var(--color-border-glow)] flex items-center justify-center">
           <!-- Placeholder avatar: Replace with <img src="..." alt="Daniel"> -->
           <div class="text-center">
-            <div class="font-mono text-6xl mb-2">👨‍💻</div>
-            <p class="font-mono text-xs text-[var(--color-text-dim)] tracking-widest">// your photo here</p>
+            <img src="{% static 'images/profile.jpeg' %}" alt="Daniel" class="w-32 h-32 rounded-full mb-4">
+            <!-- <div class="font-mono text-6xl mb-2">👨‍💻</div>
+            <p class="font-mono text-xs text-[var(--color-text-dim)] tracking-widest">// your photo here</p> -->
           </div>
         </div>
         <!-- Floating stats -->
