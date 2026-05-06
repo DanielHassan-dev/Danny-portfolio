@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <radialGradient id="bg-glow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#0a1020"/>
+      <stop offset="100%" stop-color="#020409"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="32" height="32" rx="7" fill="url(#bg-glow)"/>
+  <rect width="32" height="32" rx="7" fill="none" stroke="#0088ff" stroke-width="0.8" opacity="0.4"/>
+
+  <!-- < bracket -->
+  <path d="M6 10 L2 16 L6 22" fill="none" stroke="#00f5ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- D -->
+  <text x="16" y="23" font-family="'JetBrains Mono', monospace" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">D</text>
+
+  <!-- / slash -->
+  <text x="23.5" y="21" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="400" fill="#00f5ff" text-anchor="middle" opacity="0.75">/</text>
+
+  <!-- > bracket -->
+  <path d="M26 10 L30 16 L26 22" fill="none" stroke="#00f5ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- subtle scan line -->
+  <rect x="0" y="15.5" width="32" height="0.5" fill="#00f5ff" opacity="0.05" rx="7"/>
+</svg>
