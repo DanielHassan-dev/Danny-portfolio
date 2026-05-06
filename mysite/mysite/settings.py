@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,13 +21,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-^dq(8&4d79xd)3y*&ao=6r21uq(vk^k-nz3(=p)jho^k203a9k'
+# SECRET_KEY = 'django-insecure-^dq(8&4d79xd)3y*&ao=6r21uq(vk^k-nz3(=p)jho^k203a9k'
+SECRET_KEY = os.environ.get('SECRET_KEY', 'your-local-dev-key')
+
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
+DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = []
 
+# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']  # tighten this after deployment
 
 # Application definition
 
@@ -42,7 +48,9 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -119,10 +127,11 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [BASE_DIR / "static"]
 STATIC_ROOT = BASE_DIR / "staticfiles"
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # ── Email (update with real credentials) ─────────────────
-DEFAULT_FROM_EMAIL = "noreply@dannycodes.dev"
-CONTACT_EMAIL      = "daniel@example.com"   # <- your email
+DEFAULT_FROM_EMAIL = "danzzy051@gmail.com"
+CONTACT_EMAIL      = "danzzy051@gmail.com"   # <- your email
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST     = "smtp.gmail.com"
