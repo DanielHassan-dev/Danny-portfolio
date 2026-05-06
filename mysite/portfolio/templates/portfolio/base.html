@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -13,9 +14,7 @@
 
   <!-- ── Tailwind CSS v4 (CDN with @import support) ─── -->
   <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-  <link rel="stylesheet" href="/static/css/output.css" />
-
-  <link rel="icon" type="image/svg+xml" href="/static/images/favicon.svg" />
+  <link rel="stylesheet" href="{% static 'css/output.css' %}" />
 
   <!-- ── Alpine.js ─────────────────────────── -->
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -24,7 +23,7 @@
   <script src="https://unpkg.com/htmx.org@2.0.3"></script>
 
   <!-- ── Favicon ───────────────────────────── -->
-  <link rel="icon" type="image/svg+xml" href="/static/images/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="{% static 'images/favicon.svg' %}" />
 </head>
 
 <body
