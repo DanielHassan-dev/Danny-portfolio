@@ -102,36 +102,36 @@ def index(request):
         ],
 
         # ── Experience ──────────────────────────────────
-        "experience": [
-            {
-                "title":       "Senior Full-Stack Engineer",
-                "company":     "Acme Tech Ltd.",
-                "period":      "2022 – Present",
-                "description": "Lead backend architecture for a multi-tenant SaaS platform serving 80k+ users. Migrated monolith to service-oriented Django apps, reducing API response times by 60%.",
-                "stack":       ["Django", "DRF", "Redis", "PostgreSQL", "Docker"],
-            },
-            {
-                "title":       "Full-Stack Developer",
-                "company":     "CreativeStudio Agency",
-                "period":      "2019 – 2022",
-                "description": "Built 20+ client web applications from scratch. Championed the HTMX + Alpine.js workflow, eliminating the need for heavy JS frameworks on most projects.",
-                "stack":       ["Django", "HTMX", "Alpine.js", "Tailwind", "AWS"],
-            },
-            {
-                "title":       "Backend Developer",
-                "company":     "FinTech Startup",
-                "period":      "2017 – 2019",
-                "description": "Developed RESTful APIs for mobile banking features, integrated third-party payment gateways, and built robust Celery task pipelines for async processing.",
-                "stack":       ["Django", "DRF", "Celery", "PostgreSQL", "Stripe"],
-            },
-            {
-                "title":       "Junior Web Developer",
-                "company":     "Digital Solutions Co.",
-                "period":      "2015 – 2017",
-                "description": "Started my professional career building Django MVT applications and learning the craft of clean, maintainable Python code.",
-                "stack":       ["Django", "Python", "jQuery", "MySQL"],
-            },
-        ],
+        # "experience": [
+        #     {
+        #         "title":       "Senior Full-Stack Engineer",
+        #         "company":     "Acme Tech Ltd.",
+        #         "period":      "2022 – Present",
+        #         "description": "Lead backend architecture for a multi-tenant SaaS platform serving 80k+ users. Migrated monolith to service-oriented Django apps, reducing API response times by 60%.",
+        #         "stack":       ["Django", "DRF", "Redis", "PostgreSQL", "Docker"],
+        #     },
+        #     {
+        #         "title":       "Full-Stack Developer",
+        #         "company":     "CreativeStudio Agency",
+        #         "period":      "2019 – 2022",
+        #         "description": "Built 20+ client web applications from scratch. Championed the HTMX + Alpine.js workflow, eliminating the need for heavy JS frameworks on most projects.",
+        #         "stack":       ["Django", "HTMX", "Alpine.js", "Tailwind", "AWS"],
+        #     },
+        #     {
+        #         "title":       "Backend Developer",
+        #         "company":     "FinTech Startup",
+        #         "period":      "2017 – 2019",
+        #         "description": "Developed RESTful APIs for mobile banking features, integrated third-party payment gateways, and built robust Celery task pipelines for async processing.",
+        #         "stack":       ["Django", "DRF", "Celery", "PostgreSQL", "Stripe"],
+        #     },
+        #     {
+        #         "title":       "Junior Web Developer",
+        #         "company":     "Digital Solutions Co.",
+        #         "period":      "2015 – 2017",
+        #         "description": "Started my professional career building Django MVT applications and learning the craft of clean, maintainable Python code.",
+        #         "stack":       ["Django", "Python", "jQuery", "MySQL"],
+        #     },
+        # ],
     }
     return render(request, "portfolio/index.html", context)
 
